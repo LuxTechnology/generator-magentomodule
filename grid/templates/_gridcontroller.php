@@ -4,7 +4,7 @@ class <%= fullModuleName %>_Adminhtml_<%= name %>Controller extends Mage_Adminht
 {
     public function indexAction()
     {
-        $this_title($this->__('<%= title %>'));
+        $this->_title($this->__('<%= title %>'));
         $this->loadLayout();
         // $this->_setActiveMenu('sales/sales');
         $this->_addContent($this->getLayout()->createBlock('<%= moduleIdentifier %>/adminhtml_<%= blockIdentifier%>'));

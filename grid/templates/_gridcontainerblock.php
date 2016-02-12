@@ -4,9 +4,9 @@ class <%= fullModuleName %>_Block_Adminhtml_<%= name %> extends Mage_Adminhtml_B
 {
     public function __construct()
     {
-        $this->_blockGroup = '<%= blockIdentifier%>';
+        $this->_blockGroup = '<%= moduleIdentifier%>';
         $this->_controller = 'adminhtml_<%= blockIdentifier%>';
-        $this->_headerText = Mage::helper('<%= blockIdentifier%>')->__('<%= title %>');
+        $this->_headerText = Mage::helper('<%= moduleIdentifier%>')->__('<%= title %>');
  
         parent::__construct();
         $this->_removeButton('add');

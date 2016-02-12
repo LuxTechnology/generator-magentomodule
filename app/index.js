@@ -11,6 +11,7 @@ module.exports = generators.Base.extend({
 
         this.option('grid');
         this.option('module');
+        this.option('form');
         //this.pkg = JSON.parse(this.readFileAsString(path.join(__dirname, '../package.json')));
     },
     prompting: {
@@ -79,6 +80,12 @@ module.exports = generators.Base.extend({
 
             if(this.options.module) {
                 this.composeWith('magentomodule:module', {
+                    options: this.opts
+                });
+            }
+
+            if(this.options.form) {
+                this.composeWith('magentomodule:form', {
                     options: this.opts
                 });
             }
